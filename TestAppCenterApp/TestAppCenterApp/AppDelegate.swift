@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
@@ -15,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+
+        MSAppCenter.start("30ba3dcb-a5b4-4bd7-a3e5-adf68d163fac", withServices:[ MSAnalytics.self, MSCrashes.self ])
+        
         // Override point for customization after application launch.
         let splitViewController = window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController

@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'TestAppCenterApp' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TestAppCenterApp
+pod 'AppCenter'
+pod 'AppCenter/Distribute'
+pod 'AppCenter/Push'
+  target 'TestAppCenterAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TestAppCenterAppUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
